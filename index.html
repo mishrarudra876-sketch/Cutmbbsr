@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#050b1f">
-<title>CUTM — Centurion University of Technology and Management</title>
-<meta name="description" content="Immersive 3D landing page concept for Centurion University of Technology and Management (CUTM), Odisha.">
+<meta name="theme-color" content="#f6f2ea">
+<title>CUTM 3D Campus</title>
+<meta name="description" content="3D landing page concept for Centurion University of Technology and Management, Odisha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap">
 <link rel="stylesheet" href="styles.css">
 <script type="importmap">
 { "imports": { "three": "./vendor/three.module.min.js" } }
@@ -13,105 +16,88 @@
 </head>
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
-<div class="grain" aria-hidden="true"></div>
 
-<div id="loader" role="status" aria-live="polite">
-  <div class="loader-ring"></div>
-  <p>Loading CUTM</p>
-</div>
+<div id="loader" role="status" aria-live="polite"><span>CUTM</span></div>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="CUTM home">
-    <span class="brand-mark">C</span>
-    <span class="brand-text">CUTM</span>
-  </a>
+  <a class="brand" href="#top" aria-label="CUTM home">CUTM</a>
   <nav class="nav-links" id="navLinks" aria-label="Primary">
     <a href="#programmes">Programmes</a>
     <a href="#campuses">Campuses</a>
-    <a href="#numbers">Why CUTM</a>
+    <a href="#glance">At a glance</a>
     <a href="#apply" class="btn btn-sm">Apply</a>
   </nav>
-  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-    <span></span><span></span>
-  </button>
+  <button class="menu" id="burger" aria-expanded="false" aria-controls="navLinks">Menu</button>
 </header>
 
 <main>
   <section class="screen hero" id="top" data-screen="0">
     <div class="wrap">
-      <p class="eyebrow reveal">Centurion University · Odisha · Andhra Pradesh</p>
-      <h1 class="reveal d1">Learn by <em>doing.</em><br>Grow with <em>community.</em></h1>
-      <p class="lede reveal d2">Skill-first education across engineering, management, agriculture, health, law and media — taught where industry and communities meet.</p>
-      <div class="cta-row reveal d3">
-        <a href="#apply" class="btn">Start your application</a>
-        <a href="#programmes" class="btn btn-ghost">Explore programmes</a>
+      <p class="meta rise">Centurion University of Technology and Management</p>
+      <h1 class="rise d1">Skills-first university education across eastern India</h1>
+      <p class="lede rise d2">Engineering, management, agriculture, health, law and media, taught on working campuses in Odisha and Andhra Pradesh.</p>
+      <div class="cta-row rise d3">
+        <a href="#apply" class="btn">Apply</a>
+        <a href="#programmes" class="btn btn-quiet">See programmes</a>
       </div>
     </div>
-    <a class="scroll-hint" href="#programmes" aria-label="Scroll to programmes"><span></span></a>
   </section>
 
   <section class="screen" id="programmes" data-screen="1">
     <div class="wrap">
-      <p class="eyebrow">Schools &amp; disciplines</p>
-      <h2>Pick a path. <em>Build a career.</em></h2>
-      <div class="cards">
-        <article class="card tilt"><span class="ico">⚙</span><h3>Engineering &amp; Technology</h3><p>B.Tech, M.Tech and diplomas with live labs, workshops and industry projects.</p></article>
-        <article class="card tilt"><span class="ico">◈</span><h3>Management</h3><p>BBA, MBA and specialised programmes grounded in real enterprises.</p></article>
-        <article class="card tilt"><span class="ico">❀</span><h3>Agriculture</h3><p>Hands-on farm learning that links classrooms to rural livelihoods.</p></article>
-        <article class="card tilt"><span class="ico">✚</span><h3>Pharmacy &amp; Allied Health</h3><p>Clinical and lab training for the healthcare workforce of tomorrow.</p></article>
-        <article class="card tilt"><span class="ico">⚖</span><h3>Law &amp; Forensic Science</h3><p>From legal studies to forensic investigation, theory meets practice.</p></article>
-        <article class="card tilt"><span class="ico">▶</span><h3>Media &amp; Communication</h3><p>Storytelling, production and design for a digital-first world.</p></article>
-      </div>
+      <h2>Programmes</h2>
+      <ul class="rows">
+        <li><div><h3>Engineering and Technology</h3><p>Workshops, labs and industry projects alongside the classroom.</p></div><span class="meta">Diploma, B.Tech, M.Tech</span></li>
+        <li><div><h3>Management</h3><p>Business programmes grounded in real enterprises.</p></div><span class="meta">BBA, BMS, MBA</span></li>
+        <li><div><h3>Agriculture</h3><p>Farm-based learning that connects study to rural livelihoods.</p></div><span class="meta">UG and PG</span></li>
+        <li><div><h3>Pharmacy and Allied Health</h3><p>Clinical and laboratory training for healthcare careers.</p></div><span class="meta">UG and PG</span></li>
+        <li><div><h3>Law and Forensic Science</h3><p>Legal studies and forensic investigation, theory with practice.</p></div><span class="meta">UG and PG</span></li>
+        <li><div><h3>Media and Communication</h3><p>Storytelling, production and design for digital media.</p></div><span class="meta">UG and PG</span></li>
+      </ul>
     </div>
   </section>
 
   <section class="screen" id="campuses" data-screen="2">
     <div class="wrap">
-      <p class="eyebrow">One university, many campuses</p>
-      <h2>Tap a campus. <em>Fly there.</em></h2>
-      <p class="lede">The globe behind this page is live — choose a campus to rotate to it.</p>
-      <div class="chips" id="chips" role="tablist" aria-label="Campuses">
-        <button class="chip active" data-i="0" role="tab">Bhubaneswar</button>
-        <button class="chip" data-i="1" role="tab">Paralakhemundi</button>
-        <button class="chip" data-i="2" role="tab">Rayagada</button>
-        <button class="chip" data-i="3" role="tab">Balangir</button>
-        <button class="chip" data-i="4" role="tab">Balasore</button>
-        <button class="chip" data-i="5" role="tab">Vizianagaram</button>
-        <button class="chip" data-i="6" role="tab">Visakhapatnam</button>
-      </div>
-      <div class="glass campus-info" aria-live="polite">
-        <h3 id="cName">Bhubaneswar</h3>
-        <p id="cDesc">The flagship campus at Ramachandrapur, Jatni — the heart of CUTM.</p>
-      </div>
+      <h2>Campuses</h2>
+      <p class="lede">Select a campus to turn the globe to it.</p>
+      <ul class="campus-list" id="chips" aria-label="Campuses">
+        <li><button class="campus active" data-i="0"><span>Bhubaneswar</span><span class="meta">20.16°N 85.70°E</span></button></li>
+        <li><button class="campus" data-i="1"><span>Paralakhemundi</span><span class="meta">18.78°N 84.09°E</span></button></li>
+        <li><button class="campus" data-i="2"><span>Rayagada</span><span class="meta">19.17°N 83.42°E</span></button></li>
+        <li><button class="campus" data-i="3"><span>Balangir</span><span class="meta">20.71°N 83.49°E</span></button></li>
+        <li><button class="campus" data-i="4"><span>Balasore</span><span class="meta">21.49°N 86.93°E</span></button></li>
+        <li><button class="campus" data-i="5"><span>Vizianagaram</span><span class="meta">18.11°N 83.40°E</span></button></li>
+        <li><button class="campus" data-i="6"><span>Visakhapatnam</span><span class="meta">17.69°N 83.22°E</span></button></li>
+      </ul>
+      <p class="campus-info" aria-live="polite"><b id="cName">Bhubaneswar</b> <span id="cDesc">The flagship campus at Ramachandrapur, Jatni.</span></p>
     </div>
   </section>
 
-  <section class="screen" id="numbers" data-screen="3">
+  <section class="screen" id="glance" data-screen="3">
     <div class="wrap">
-      <p class="eyebrow">Why CUTM</p>
-      <h2>Outcomes that <em>show up.</em></h2>
-      <div class="stats">
-        <div class="glass stat"><b data-count="7">0</b><span>Campuses</span></div>
-        <div class="glass stat"><b data-count="126" data-suffix="+">0</b><span>Programmes</span></div>
-        <div class="glass stat"><b data-count="200" data-suffix="+">0</b><span>Recruiters</span></div>
-        <div class="glass stat"><b data-text="NAAC A">A</b><span>Accredited</span></div>
-      </div>
-      <p class="fine">Indicative figures compiled from public sources — to be replaced with official CUTM data.</p>
+      <h2>At a glance</h2>
+      <dl class="stats">
+        <div><dt>Campuses</dt><dd>7</dd></div>
+        <div><dt>Programmes</dt><dd>126</dd></div>
+        <div><dt>Recruiters</dt><dd>200+</dd></div>
+        <div><dt>NAAC grade</dt><dd>A</dd></div>
+      </dl>
+      <p class="fine">Figures come from public listings and are to be confirmed against official CUTM data.</p>
     </div>
   </section>
 
   <section class="screen last" id="apply" data-screen="4">
-    <div class="wrap center">
-      <p class="eyebrow">Admissions</p>
-      <h2>Your future <em>starts here.</em></h2>
-      <p class="lede">Join thousands of learners building skills that matter.</p>
-      <div class="cta-row center">
-        <a href="https://cutm.ac.in/" class="btn" target="_blank" rel="noopener">Visit cutm.ac.in</a>
-        <a href="#top" class="btn btn-ghost">Back to top</a>
+    <div class="wrap">
+      <h2>Apply to CUTM</h2>
+      <p class="lede">Admissions, programme details and campus information are on the official site.</p>
+      <div class="cta-row">
+        <a href="https://cutm.ac.in/" class="btn" target="_blank" rel="noopener">Go to cutm.ac.in</a>
+        <a href="#top" class="btn btn-quiet">Back to top</a>
       </div>
       <footer>
-        <p>Ramachandrapur, Jatni, Bhubaneswar, Odisha 752050</p>
-        <p class="fine">Concept landing page · not an official CUTM website</p>
+        <p class="meta">Ramachandrapur, Jatni, Bhubaneswar, Odisha 752050</p>
+        <p class="fine">Concept page, not an official CUTM website.</p>
       </footer>
     </div>
   </section>
