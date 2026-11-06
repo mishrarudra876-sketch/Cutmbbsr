@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f6f2ea">
+<meta name="theme-color" content="#130b09">
 <title>CUTM 3D Campus</title>
 <meta name="description" content="3D landing page concept for Centurion University of Technology and Management, Odisha.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist+Mono&display=swap">
 <link rel="stylesheet" href="styles.css">
 <script type="importmap">
 { "imports": { "three": "./vendor/three.module.min.js" } }
@@ -16,15 +16,14 @@
 </head>
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
-
 <div id="loader" role="status" aria-live="polite"><span>CUTM</span></div>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="CUTM home">CUTM</a>
+  <a class="brand" href="#top" aria-label="CUTM home"><i class="dia"></i>CUTM</a>
   <nav class="nav-links" id="navLinks" aria-label="Primary">
     <a href="#programmes">Programmes</a>
     <a href="#campuses">Campuses</a>
-    <a href="#glance">At a glance</a>
+    <a href="#numbers">Numbers</a>
     <a href="#apply" class="btn btn-sm">Apply</a>
   </nav>
   <button class="menu" id="burger" aria-expanded="false" aria-controls="navLinks">Menu</button>
@@ -34,33 +33,40 @@
   <section class="screen hero" id="top" data-screen="0">
     <div class="wrap">
       <p class="meta rise">Centurion University of Technology and Management</p>
-      <h1 class="rise d1">Skills-first university education across eastern India</h1>
-      <p class="lede rise d2">Engineering, management, agriculture, health, law and media, taught on working campuses in Odisha and Andhra Pradesh.</p>
+      <h1 class="rise d1">Learn by <span class="hl">doing.</span></h1>
+      <p class="lede rise d2">Skills-first university education across Odisha and Andhra Pradesh, taught on working campuses.</p>
       <div class="cta-row rise d3">
         <a href="#apply" class="btn">Apply</a>
-        <a href="#programmes" class="btn btn-quiet">See programmes</a>
+        <a href="#programmes" class="btn btn-line">See programmes</a>
+      </div>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Engineering and Technology</span><span>Management</span><span>Agriculture</span><span>Pharmacy and Allied Health</span><span>Law and Forensic Science</span><span>Media and Communication</span>
+        <span>Engineering and Technology</span><span>Management</span><span>Agriculture</span><span>Pharmacy and Allied Health</span><span>Law and Forensic Science</span><span>Media and Communication</span>
       </div>
     </div>
   </section>
 
-  <section class="screen" id="programmes" data-screen="1">
+  <section class="screen band bone" id="programmes" data-screen="1">
+    <div class="border"></div>
     <div class="wrap">
-      <h2>Programmes</h2>
+      <h2>What you can study</h2>
       <ul class="rows">
-        <li><div><h3>Engineering and Technology</h3><p>Workshops, labs and industry projects alongside the classroom.</p></div><span class="meta">Diploma, B.Tech, M.Tech</span></li>
-        <li><div><h3>Management</h3><p>Business programmes grounded in real enterprises.</p></div><span class="meta">BBA, BMS, MBA</span></li>
-        <li><div><h3>Agriculture</h3><p>Farm-based learning that connects study to rural livelihoods.</p></div><span class="meta">UG and PG</span></li>
-        <li><div><h3>Pharmacy and Allied Health</h3><p>Clinical and laboratory training for healthcare careers.</p></div><span class="meta">UG and PG</span></li>
-        <li><div><h3>Law and Forensic Science</h3><p>Legal studies and forensic investigation, theory with practice.</p></div><span class="meta">UG and PG</span></li>
-        <li><div><h3>Media and Communication</h3><p>Storytelling, production and design for digital media.</p></div><span class="meta">UG and PG</span></li>
+        <li><h3>Engineering and Technology</h3><span class="meta">Diploma, B.Tech, M.Tech</span><p>Workshops, labs and industry projects alongside the classroom.</p></li>
+        <li><h3>Management</h3><span class="meta">BBA, BMS, MBA</span><p>Business programmes grounded in real enterprises.</p></li>
+        <li><h3>Agriculture</h3><span class="meta">UG and PG</span><p>Farm-based learning that connects study to rural livelihoods.</p></li>
+        <li><h3>Pharmacy and Allied Health</h3><span class="meta">UG and PG</span><p>Clinical and laboratory training for healthcare careers.</p></li>
+        <li><h3>Law and Forensic Science</h3><span class="meta">UG and PG</span><p>Legal studies and forensic investigation, theory with practice.</p></li>
+        <li><h3>Media and Communication</h3><span class="meta">UG and PG</span><p>Storytelling, production and design for digital media.</p></li>
       </ul>
     </div>
   </section>
 
   <section class="screen" id="campuses" data-screen="2">
     <div class="wrap">
-      <h2>Campuses</h2>
-      <p class="lede">Select a campus to turn the globe to it.</p>
+      <p class="meta">Odisha and Andhra Pradesh</p>
+      <h2>Seven campuses, two states</h2>
       <ul class="campus-list" id="chips" aria-label="Campuses">
         <li><button class="campus active" data-i="0"><span>Bhubaneswar</span><span class="meta">20.16°N 85.70°E</span></button></li>
         <li><button class="campus" data-i="1"><span>Paralakhemundi</span><span class="meta">18.78°N 84.09°E</span></button></li>
@@ -74,9 +80,10 @@
     </div>
   </section>
 
-  <section class="screen" id="glance" data-screen="3">
+  <section class="screen band gold" id="numbers" data-screen="3">
+    <div class="border"></div>
     <div class="wrap">
-      <h2>At a glance</h2>
+      <h2>In numbers</h2>
       <dl class="stats">
         <div><dt>Campuses</dt><dd>7</dd></div>
         <div><dt>Programmes</dt><dd>126</dd></div>
@@ -87,13 +94,14 @@
     </div>
   </section>
 
-  <section class="screen last" id="apply" data-screen="4">
+  <section class="screen band red last" id="apply" data-screen="4">
+    <div class="border"></div>
     <div class="wrap">
       <h2>Apply to CUTM</h2>
       <p class="lede">Admissions, programme details and campus information are on the official site.</p>
       <div class="cta-row">
-        <a href="https://cutm.ac.in/" class="btn" target="_blank" rel="noopener">Go to cutm.ac.in</a>
-        <a href="#top" class="btn btn-quiet">Back to top</a>
+        <a href="https://cutm.ac.in/" class="btn btn-bone" target="_blank" rel="noopener">Go to cutm.ac.in</a>
+        <a href="#top" class="btn btn-line">Back to top</a>
       </div>
       <footer>
         <p class="meta">Ramachandrapur, Jatni, Bhubaneswar, Odisha 752050</p>

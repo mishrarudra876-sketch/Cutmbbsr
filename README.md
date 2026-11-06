@@ -13,11 +13,10 @@ To publish: GitHub → Settings → Pages → deploy from branch, root.
 
 ## What's in it
 
-- **Live 3D globe** — dotted shell, atmosphere shader, campus markers with pulses, animated arcs from Bhubaneswar to the other campuses.
-- **Scroll-driven camera** — each section has its own camera/globe keyframe; scrolling also adds spin.
-- **Tap a campus** — chips rotate the globe to that campus.
-- **Orbiting discipline shapes** in the Programmes section; 3D-tilt cards (touch + mouse).
-- **Mobile first** — separate mobile camera layout, DPR capped at 1.5, fewer particles, no antialias on phones, pauses when the tab is hidden, respects `prefers-reduced-motion`, safe-area insets, 44px+ tap targets, no-WebGL fallback.
+- **Hero: a carved 3D Konark-style wheel** (Odisha's Sun Temple chakra) built from primitives, turning slowly and with scroll.
+- **Poster layout** — dark hero, then solid colour bands (bone, ink, marigold, laterite) with a diamond-border motif and a scrolling programme ticker.
+- **Campuses: a clay globe** with engraved graticule, campus pins and arcs. Pick a campus and the globe turns and zooms to it.
+- **Mobile first** — separate phone layout (campus list becomes a sheet over the globe), DPR capped, rendering skipped while a colour band covers the canvas, pauses when the tab is hidden, respects `prefers-reduced-motion`, safe-area insets, no-WebGL fallback.
 
 ## Content note
 
